@@ -6,9 +6,9 @@
 #### .
 ####   Struct_ICM45686 ICM45686;
 ####   while (!ICM45686_Initialization_UF1()) {
-####         printf("Error inicializando ICM4568. Abortando task.\n");
-####         gpio_set_level(led1, 0);
-####         vTaskDelay(pdMS_TO_TICKS(100));
+####           printf("Error inicializando ICM4568. Abortando task.\n");
+####           gpio_set_level(led1, 0);
+####           vTaskDelay(pdMS_TO_TICKS(100));
 ####     }
 #### .
 #### .
