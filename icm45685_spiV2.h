@@ -443,7 +443,7 @@ uint8_t ICM45686_Readbyte(uint8_t reg_addr);
 void ICM45686_Writebyte(uint8_t reg_addr, uint8_t val);
 void ICM45686_Read_Buffer(uint8_t reg_addr, uint8_t len, uint8_t* data);
 void ICM45686_Write_Buffer(uint8_t reg_addr, uint8_t len, uint8_t* data);
-int ICM45686_Initialization(void);
+
 void ICM45686_Get6AxisRawData(int16_t * accel, int16_t * gyro);
 void ICM45686_Get3AxisGyroRawData(int16_t * gyro);
 void ICM45686_Get3AxisAccRawData(int16_t * accel);
@@ -453,9 +453,7 @@ int ICM45686_DataReady_(void);
 void ICM45686_Configure_Filter(uint8_t accel_bw, uint8_t gyro_bw);
 int ICM45686_DataReady(void);
 void ICM45686_Enable_DRDY(void);
-int ICM45686_Initialization_UF(void);
-int ICM45686_Initialization_UFF(void);
-int ICM45686_InitializationFIFO(void);
+
 int ICM45686_ReadFIFO(Struct_ICM45686* imu, float range, float dps);
 esp_err_t icm_set_gyro_lp_avg(ipreg_sys1_reg_170_gyro_lp_avg_sel_t gyr_avg);
 esp_err_t icm_set_accel_lp_avg(ipreg_sys2_reg_129_accel_lp_avg_sel_t acc_avg);
